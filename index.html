@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Movie Modal</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css"
+		/>
+	</head>
+	<body>
+		<header class="p-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 p-0">
+						<a href="#" class="tmdbLogo">
+							<img
+								src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+								alt="TMDB Logo"
+							/>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<button
+							type="button"
+							id="show-modal"
+							class="btn btn-warning float-right"
+						>
+							Add Movie
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div id="movie-container" class="row">
+				<!-- <div class="col-md-4">
+					<div class="card">
+						<figure class="movie-card mb-0">
+							<img
+								src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+								alt="Movie Poster"
+							/>
+
+							<figcaption>
+								<div class="rating-section">
+									<div class="row">
+										<div class="col-md-10">
+											<div class="movie-name">
+												<h3>The Avengers</h3>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="movie-rating">
+												<h3>4</h3>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="overview-section">
+									<h3>The Avengers</h3>
+									<em>Overview</em>
+									<p>
+										Marvel's The Avengers[5] (titled Marvel
+										Avengers Assemble in the United Kingdom
+										and Ireland[1][6] and commonly referred
+										to as simply The Avengers) is a 2012
+										American superhero film based on the
+										Marvel Comics superhero team of the same
+										name.
+									</p>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<div class="back-drop d-none"></div>
+		<div id="movie-modal" class="d-none">
+			<form id="movie-form">
+				<div class="form-group">
+					<label for="title-control">Movie Title</label>
+					<input
+						type="text"
+						id="title-control"
+						class="form-control"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="posterUrl-control">Movie Poster URL</label>
+					<input
+						type="text"
+						id="posterUrl-control"
+						class="form-control"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="overview-control">Overview</label>
+					<textarea
+						id="overview-control"
+						class="form-control"
+					></textarea>
+				</div>
+				<div class="form-group">
+					<label for="ratings-control">Rating</label>
+					<select id="ratings-control" class="form-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+				<div class="form-buttons float-right">
+					<button
+						type="button"
+						id="cancel-btn"
+						class="btn btn-danger"
+					>
+						Cancel
+					</button>
+					<button id="submit-btn" class="btn btn-success">
+						Add Movie
+					</button>
+					<button
+						type="button"
+						id="update-btn"
+						class="btn btn-warning d-none"
+					>
+						Update
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
